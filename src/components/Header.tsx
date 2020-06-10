@@ -96,7 +96,7 @@ const Rect = styled.li`
 		width: 15px;
 		height: 15px;
 		animation-delay: 2s;
-		animation-duration: 35s;
+		animation-duration: 11s;
 	}
 	&:nth-child(10){
 		left: 85%;
@@ -104,6 +104,27 @@ const Rect = styled.li`
 		height: 150px;
 		animation-delay: 0s;
 		animation-duration: 11s;
+	}
+	&:nth-child(11){
+		left: 0%;
+		width: 120px;
+		height: 120px;
+		animation-delay: 0s;
+		animation-duration: 14s;
+	}
+	&:nth-child(12){
+		left: 95%;
+		width: 30px;
+		height: 30px;
+		animation-delay: 10s;
+		animation-duration: 18s;
+	}
+	&:nth-child(13){
+		left: 55%;
+		width: 80px;
+		height: 80px;
+		animation-delay: 5s;
+		animation-duration: 20s;
 	}
 `;
 
@@ -124,17 +145,17 @@ const PageTitle = styled.p`
 	transform: translate(-50%, calc(-100% - 8.5vh));
 	color: white;
 	white-space: nowrap;
-	font-family: 'roboto', sans-serif;
-	font-size: 30px;
+	font-size: 38px;
+	font-weight: 700;
 	${media.greaterThan('small')`
 		transform: translate(-50%, calc(-100% - 11vh));
-		font-size: 35px;
+		font-size: 43px;
 	`}
 `;
 const SubTitle = styled(PageTitle)`
 	transform: translate(-50%, 9vh);
 	font-size: 18px;
-	font-weight: 200;
+	font-weight: 100;
 	${media.greaterThan('small')`
 		transform: translate(-50%, 12vh);
 		font-size: 24px;
@@ -145,10 +166,10 @@ const Header = () => {
 	return (
 		<HeaderWrapper>
 			<RectUl>
-				{[...Array(10)].map((val, index) => ( <Rect key={index} /> ))}
+				{[...Array(13)].map((val, index) => ( <Rect key={index} /> ))}
 			</RectUl>
 			<SendaiIcon alt="" src="/images/sendai.png" />
-			<PageTitle>bo-yakitarako.com</PageTitle>
+			<PageTitle>bo-yakitarako</PageTitle>
 			<SubTitle>そこら辺にいるただの大学生です</SubTitle>
 		</HeaderWrapper>
 	)
