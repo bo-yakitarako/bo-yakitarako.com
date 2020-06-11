@@ -1,11 +1,13 @@
 import React from 'react';
 import styled, { ThemeProvider as StyledThemeProvider } from 'styled-components';
 import { StylesProvider, createMuiTheme, ThemeProvider as MaterialThemeProvider } from '@material-ui/core';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 import { media } from '../modules/helper';
 import Header from './Header';
 import Footer from './Footer';
 import Nav from './Nav';
+import Drawer from './Drawer';
+import Home from './children/Home';
 
 const theme = createMuiTheme({
 	palette: {
@@ -28,6 +30,7 @@ const theme = createMuiTheme({
 });
 
 const Wrapper = styled.div`
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
@@ -41,15 +44,16 @@ const Contents = styled.div`
 	width: 95%;
 	margin: 20px auto;
 	color: ${props => props.theme.palette.text.primary};
-	${media.greaterThan('medium')`
-		width: 720px;
-	`}
 	${media.greaterThan('desktop')`
 		width: 960px;
 	`}
 	${media.greaterThan('large')`
 		width: 1080px;
 	`}
+`;
+const Main = styled.main`
+	display: block;
+	flex-grow: 1;
 `;
 
 function App() {
@@ -60,8 +64,12 @@ function App() {
 					<BrowserRouter>
 						<Wrapper>
 							<Header />
+							<Drawer />
 							<Contents>
 								<Nav />
+								<Main>
+									<Route exact path="/" component={Home} />
+								</Main>
 							</Contents>
 							<Footer />
 						</Wrapper>

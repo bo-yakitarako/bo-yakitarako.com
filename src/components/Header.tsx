@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
-import media from 'styled-media-query';
+import { media } from '../modules/helper';
 
 const Animate = keyframes`
 	0% {

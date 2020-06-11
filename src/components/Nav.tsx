@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 const Wrapper = styled.nav`
 	display: none;
 	margin-left: ${props => props.theme.spacing(1)}px;
-	${media.greaterThan('medium')`
+	${media.greaterThan('desktop')`
 		display: block;
 		width: 300px;
 	`}
@@ -47,22 +47,17 @@ const Nav = () => {
 			<List>
 				<Link to="/" style={{ textDecoration: 'none' }}>
 					<ListItemTop button>
-						<ListItemText primary="Home" />
+						<ListItemText primary="ホーム" />
 					</ListItemTop>
-				</Link>
-				<Link to="/programming" style={{ textDecoration: 'none' }}>
-					<ListItem button>
-						<ListItemText primary="Programming" />
-					</ListItem>
 				</Link>
 				<Link to="/works" style={{ textDecoration: 'none' }}>
 					<ListItem button>
-						<ListItemText primary="Works" />
+						<ListItemText primary="つくったやつ" />
 					</ListItem>
 				</Link>
 				<Link to="/works/unavailable" style={{ textDecoration: 'none' }}>
 					<ListItem button>
-						<ListItemText primary="Works (提供終了)" />
+						<ListItemText primary="つくったやつ(過去)" />
 					</ListItem>
 				</Link>
 			</List>
