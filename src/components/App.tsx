@@ -8,6 +8,8 @@ import Footer from './Footer';
 import Nav from './Nav';
 import Drawer from './Drawer';
 import Home from './children/Home';
+import Works from './children/Works';
+import WorksUnavailable from './children/WorksUnavailable';
 
 const theme = createMuiTheme({
 	palette: {
@@ -69,6 +71,8 @@ function App() {
 								<Nav />
 								<Main>
 									<Route exact path="/" component={Home} />
+									<Route path="/works" component={Works} />
+									<Route path="/works_unavailable" component={WorksUnavailable} />
 								</Main>
 							</Contents>
 							<Footer />

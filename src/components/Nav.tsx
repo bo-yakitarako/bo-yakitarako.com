@@ -55,7 +55,7 @@ const Nav = () => {
 						<ListItemText primary="つくったやつ" />
 					</ListItem>
 				</Link>
-				<Link to="/works/unavailable" style={{ textDecoration: 'none' }}>
+				<Link to="/works_unavailable" style={{ textDecoration: 'none' }}>
 					<ListItem button>
 						<ListItemText primary="つくったやつ(過去)" />
 					</ListItem>

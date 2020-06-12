@@ -52,7 +52,7 @@ const Drawer = () => {
 						</ListItem>
 						<Divider />
 						<ListItem>
-							<Link to="/works/unavailable" onClick={() => { toggleDrawer(false) }}>
+							<Link to="/works_unavailable" onClick={() => { toggleDrawer(false) }}>
 								<ItemText primary="つくったやつ(過去)" />
 							</Link>
 						</ListItem>

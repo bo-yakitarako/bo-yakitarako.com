@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { Typography, Divider } from '@material-ui/core';
 import { media } from '../../modules/helper';
 
-const SectionTitle = styled(Typography)`
+export const SectionTitle = styled(Typography)`
 	font-weight: 500;
 	font-size: 24px;
 	${media.greaterThan('tiny')`
@@ -13,18 +13,13 @@ const SectionTitle = styled(Typography)`
 	${media.greaterThan('small')`
 		font-size: 32px;
 	`}
-	${media.greaterThan('medium')`
-		font-size: 36px;
-	`}
-	${media.greaterThan('desktop')`
-		font-size: 42px;
-	`}
 `;
-const SectionContents = styled.div`
+export const SectionContents = styled.div`
 	margin-top: 10px;
 `;
-const SectionText = styled(Typography)`
+export const SectionText = styled(Typography)`
 	font-size: 14px;
+	color: ${props => props.theme.palette.text.primary};
 	${media.greaterThan('tiny')`
 		font-size: 16px;
 	`}
@@ -58,7 +53,7 @@ const Home = () => {
 			<SectionContents>
 				<SectionText>Sparebeatに関するいろんなもの作ってました</SectionText>
 				<SectionText><Strong to="/works">つくったやつ</Strong>からどうぞ</SectionText>
-				<SectionText><Strong to="/works/unavailable">つくったやつ(過去)</Strong>は公開終了したものの供養です。南無〜</SectionText>
+				<SectionText><Strong to="/works_unavailable">つくったやつ(過去)</Strong>は公開終了したものの供養です。南無〜</SectionText>
 			</SectionContents>
 			<SectionTitle style={{ marginTop: 20, }}>Contact</SectionTitle>
 			<Divider />

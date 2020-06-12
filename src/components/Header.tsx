@@ -130,10 +130,13 @@ const Rect = styled.li`
 
 const SendaiIcon = styled.img`
 	position: absolute;
-	height: 15vh;
+	height: 12vh;
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
+	${media.greaterThan('tiny')`
+		height: 15vh;
+	`}
 	${media.greaterThan('small')`
 		height: 20vh;
 	`}
@@ -142,20 +145,28 @@ const PageTitle = styled.p`
 	position: absolute;
 	left: 50%;
 	top: 50%;
-	transform: translate(-50%, calc(-100% - 8.5vh));
+	transform: translate(-50%, calc(-100% - 6.5vh));
 	color: white;
 	white-space: nowrap;
-	font-size: 38px;
+	font-size: 32px;
 	font-weight: 700;
+	${media.greaterThan('tiny')`
+		transform: translate(-50%, calc(-100% - 8.5vh));
+		font-size: 38px;
+	`}
 	${media.greaterThan('small')`
 		transform: translate(-50%, calc(-100% - 11vh));
 		font-size: 43px;
 	`}
 `;
 const SubTitle = styled(PageTitle)`
-	transform: translate(-50%, 9vh);
-	font-size: 18px;
+	transform: translate(-50%, 7vh);
+	font-size: 16px;
 	font-weight: 100;
+	${media.greaterThan('tiny')`
+		transform: translate(-50%, 9vh);
+		font-size: 18px;
+	`}
 	${media.greaterThan('small')`
 		transform: translate(-50%, 12vh);
 		font-size: 24px;
