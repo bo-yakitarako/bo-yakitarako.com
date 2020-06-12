@@ -43,7 +43,17 @@ const ListItemTop = styled(ListItem)`
 const Nav = () => {
 	return (
 		<Wrapper>
-			<Ad>広告予定地</Ad>
+			<Ad>
+				<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+				<ins className="adsbygoogle"
+					style={{ display: 'inline-block', width: 300, height: 250 }}
+					data-ad-client="ca-pub-5981392133397607"
+					data-ad-slot="7362808177">
+				</ins>
+				<script>
+					(adsbygoogle = window.adsbygoogle || []).push({});
+				</script>
+			</Ad>
 			<List>
 				<Link to="/" style={{ textDecoration: 'none' }}>
 					<ListItemTop button>
