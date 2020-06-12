@@ -96,7 +96,7 @@ const Product: React.FC<IProps> = (props: IProps) => {
 					<Text>・制作内容: {content}</Text>
 					<Text>・ひとこと: {comment}</Text>
 				</Description>
-					<Image alt="" src={`/images/${image}.jpg`} />
+				<Image alt="" src={`/images/${image}.jpg`} />
 			</Contents>
 		</Wrapper>
 	);
