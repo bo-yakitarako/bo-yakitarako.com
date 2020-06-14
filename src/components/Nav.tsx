@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import { List as MaterialList, ListItem as MaterialListItem, ListItemText } from '@material-ui/core';
 import { media } from '../modules/helper';
@@ -41,18 +41,20 @@ const ListItemTop = styled(ListItem)`
 `;
 
 const Nav = () => {
+	useEffect(() => {
+		if (window.adsbygoogle) {
+			window.adsbygoogle.push({});
+		}
+	}, []);
 	return (
 		<Wrapper>
 			<Ad>
-				<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-				<ins className="adsbygoogle"
+				<ins
+					className="adsbygoogle"
 					style={{ display: 'inline-block', width: 300, height: 250 }}
 					data-ad-client="ca-pub-5981392133397607"
-					data-ad-slot="7362808177">
-				</ins>
-				<script>
-					(adsbygoogle = window.adsbygoogle || []).push({});
-				</script>
+					data-ad-slot="7362808177"
+				/>
 			</Ad>
 			<List>
 				<Link to="/" style={{ textDecoration: 'none' }}>

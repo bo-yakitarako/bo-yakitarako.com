@@ -14,7 +14,7 @@ export const SectionTitle = styled(Typography)`
 		font-size: 32px;
 	`}
 `;
-export const SectionContents = styled.div`
+const SectionContents = styled.div`
 	margin-top: 10px;
 `;
 export const SectionText = styled(Typography)`

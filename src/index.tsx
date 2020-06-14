@@ -3,6 +3,12 @@ import ReactDOM from 'react-dom';
 import App from './components/App';
 import * as serviceWorker from './serviceWorker';
 
+declare global {
+	interface Window {
+		adsbygoogle: any[];
+	}
+}
+
 ReactDOM.render(
 	<React.StrictMode>
 		<App />
