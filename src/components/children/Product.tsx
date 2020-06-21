@@ -83,7 +83,7 @@ const Product: React.FC<IProps> = (props: IProps) => {
 		<Wrapper>
 			<Title>
 				{link ? (
-					<Link href={link} target="_blank" rel="noopener">{title}</Link>
+					<Link href={link}>{title}</Link>
 				) : (
 					title
 				)}

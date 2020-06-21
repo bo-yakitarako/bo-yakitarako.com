@@ -42,7 +42,7 @@ const ListItemTop = styled(ListItem)`
 
 const Nav = () => {
 	useEffect(() => {
-		if (window.adsbygoogle) {
+		if (window.adsbygoogle && process.env.NODE_ENV === 'production') {
 			window.adsbygoogle.push({});
 		}
 	}, []);
